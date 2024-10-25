@@ -1,0 +1,165 @@
+/* Base Styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+.container {
+  width: 90%;
+  max-width: 550px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+.app-title {
+  text-align: center;
+  color: #1a73e8;
+  margin-bottom: 15px;
+  font-size: 1.8em;
+}
+
+/* Language Selection */
+.language-selection {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.language-selection label {
+  font-weight: bold;
+  margin-right: 8px;
+}
+.language-selection select {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Signature Pad */
+.signature-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+canvas {
+  border: 2px solid #1a73e8;
+  border-radius: 8px;
+  background-color: #fafafa;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+/* Button Group */
+.btn-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+button {
+  background-color: #1a73e8;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  flex: 1;
+  max-width: 120px;
+}
+button:hover {
+  background-color: #166bbf;
+}
+
+/* Customization Panel */
+.customization-panel {
+  margin-bottom: 20px;
+}
+.section-title {
+  font-size: 1.2em;
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+}
+label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+}
+input[type="range"] {
+  width: 100%;
+}
+input[type="color"] {
+  display: block;
+  margin: 10px auto;
+}
+
+/* Signature List */
+#show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.signature-img {
+  width: 80px;
+  height: 80px;
+  margin: 10px 0;
+}
+.error {
+  color: #f44336;
+  font-size: 0.9em;
+  margin: 10px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+  .app-title {
+    font-size: 1.5em;
+  }
+  button {
+    padding: 6px 12px;
+    font-size: 0.9em;
+  }
+  .signature-container {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-title {
+    font-size: 1.3em;
+  }
+  .language-selection, .customization-panel, .btn-group {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .btn-group {
+    gap: 5px;
+  }
+  button {
+    font-size: 0.85em;
+    padding: 6px 10px;
+    width: 100%;
+  }
+  label {
+    font-size: 0.9em;
+  }
+  .section-title {
+    font-size: 1.1em;
+  }
+}
